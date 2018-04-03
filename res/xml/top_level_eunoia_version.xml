@@ -37,6 +37,14 @@
         settings:enableCopying="true"
         settings:controller="com.eunoiaos.settings.version.EunoiaVersionController"/>
 
+    <!-- Maintainer -->
+    <Preference
+        android:key="maintainer"
+        android:title="@string/maintainer_title"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.eunoiaos.settings.version.EunoiaMaintainerController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"

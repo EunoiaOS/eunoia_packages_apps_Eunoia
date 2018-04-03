@@ -71,6 +71,10 @@
     <string name="hardware_keys_action_split_screen">Split screen</string>
     <string name="hardware_keys_action_kill_app">Kill foreground app</string>
 
+    <!-- Maintainer -->
+    <string name="maintainer_title">Maintainer</string>
+    <string name="maintainer_name">Unknown</string>
+
     <!-- Navigation Bar -->
     <string name="navigation_bar_category">Navigation bar</string>
     <string name="navigation_bar_enable_taskbar_title">Enable taskbar</string>
