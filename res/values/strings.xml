@@ -40,4 +40,8 @@
     <string name="unit_milliseconds">milliseconds</string>
     <string name="unit_pixels" translatable="false">dp</string>
     <string name="unit_hz" translatable="false">hz</string>
+
+    <!-- Version -->
+    <string name="eunoia_version_summary">All about EunoiaOS information</string>
+    <string name="eunoia_version_title">Eunoia Version</string>
 </resources>
