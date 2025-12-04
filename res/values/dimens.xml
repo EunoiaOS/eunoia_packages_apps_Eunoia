@@ -15,6 +15,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- User card -->
+    <dimen name="eunoia_card_action">36dp</dimen>
+    <dimen name="icon_verified_size">16dp</dimen>
+
+    <!-- User Icon -->
+    <dimen name="user_icon_size">64dp</dimen>
+
     <!-- Oval preview size -->
     <dimen name="oval_notification_size">26dp</dimen>
 </resources>

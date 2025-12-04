@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2023 The AtigaOS Project
+<!-- Copyright (C) 2006 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,7 +12,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <color name="homepage_eunoia_background">@android:color/system_accent1_300</color>
-    <color name="eunoia_innercard_bg">#3d4441</color>
+
+<resources xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
