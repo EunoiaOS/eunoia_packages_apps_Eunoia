@@ -16,23 +16,30 @@
 
 package com.eunoiaos.settings;
 
-import android.os.Bundle;
-
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
-import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
 
-public class EunoiaVersionFragment extends SettingsPreferenceFragment {
+@SearchIndexable
+public class EunoiaVersionFragment extends DashboardFragment {
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    protected int getPreferenceScreenResId() {
+        return R.xml.top_level_eunoia_version;
+    }
 
-        addPreferencesFromResource(R.xml.top_level_eunoia_version);
+    @Override
+    protected String getLogTag() {
+        return "NextVersionSettings";
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.EUNOIA_SETTINGS;
     }
+
+    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider(R.xml.top_level_eunoia_version);
 }
