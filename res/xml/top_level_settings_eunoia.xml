@@ -20,7 +20,7 @@
     android:key="top_level_eunoia"
     android:title="@string/eunoia_title">
 
-    <Preference
+    <PreferenceScreen
         android:key="buttonpref"
         android:icon="@drawable/ic_settings_button"
         android:title="@string/button_settings_title"
