@@ -19,6 +19,10 @@
     <string name="eunoia_summary">EunoiaOS customization features</string>
     <string name="eunoia_title">Eunoia</string>
 
+    <!-- Button -->
+    <string name="button_settings_title">Button</string>
+    <string name="button_settings_summary">Button settings extra</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>

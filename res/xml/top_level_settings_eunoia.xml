@@ -18,6 +18,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_eunoia"
-    android:title="@string/eunoia_title" >
+    android:title="@string/eunoia_title">
 
+    <Preference
+        android:key="buttonpref"
+        android:icon="@drawable/ic_settings_button"
+        android:title="@string/button_settings_title"
+        android:summary="@string/button_settings_summary"
+        android:fragment="com.eunoiaos.settings.input.ButtonFragment" />
 </PreferenceScreen>
