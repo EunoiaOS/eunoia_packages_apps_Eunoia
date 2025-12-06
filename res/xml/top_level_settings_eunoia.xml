@@ -26,4 +26,12 @@
         android:title="@string/button_settings_title"
         android:summary="@string/button_settings_summary"
         android:fragment="com.eunoiaos.settings.input.ButtonFragment" />
+
+    <PreferenceScreen
+        android:key="sbpref"
+        android:icon="@drawable/ic_settings_statusbar"
+        android:title="@string/statusbar_settings_title"
+        android:summary="@string/statusbar_settings_summary"
+        android:fragment="com.eunoiaos.settings.statusbar.StatusbarFragment" />
+
 </PreferenceScreen>

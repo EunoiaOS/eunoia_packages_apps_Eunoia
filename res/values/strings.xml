@@ -101,6 +101,12 @@
     <string name="power_menu_advanced_restart_summary">When unlocked, include options in the power menu for restarting into recovery or bootloader</string>
     <string name="power_menu_emergency_affordance_enabled">Emergency affordance is enabled</string>
 
+    <!-- Statusbar -->
+    <string name="statusbar_settings_title">Statusbar</string>
+    <string name="statusbar_settings_summary">Statusbar settings extra</string>
+    <string name="status_bar_logo_title">Statusbar Logo</string>
+    <string name="status_bar_logo_summary">Display a EunoiaOS logo on left of the status bar</string>
+
     <!-- Units -->
     <string name="unit_seconds">seconds</string>
     <string name="unit_milliseconds">milliseconds</string>
