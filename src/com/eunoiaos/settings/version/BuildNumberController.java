@@ -248,9 +248,4 @@ public class BuildNumberController extends BasePreferenceController implements
     protected boolean isUserAMonkey() {
         return ActivityManager.isUserAMonkey();
     }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsEvent.EUNOIA_SETTINGS;
-    }
 }

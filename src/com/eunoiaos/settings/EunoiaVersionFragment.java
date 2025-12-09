@@ -16,14 +16,20 @@
 
 package com.eunoiaos.settings;
 
+import android.content.Context;
+import android.content.Intent;
+
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.eunoiaos.settings.version.BuildNumberController;
+
 @SearchIndexable
 public class EunoiaVersionFragment extends DashboardFragment {
+    private BuildNumberController mBuildNumberController;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -38,6 +44,21 @@ public class EunoiaVersionFragment extends DashboardFragment {
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.EUNOIA_SETTINGS;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mBuildNumberController = use(BuildNumberController.class);
+        mBuildNumberController.setHost(this /* parent */);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (mBuildNumberController.onActivityResult(requestCode, resultCode, data)) {
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
