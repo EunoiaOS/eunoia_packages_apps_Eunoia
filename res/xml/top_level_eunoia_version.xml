@@ -31,11 +31,11 @@
 
     <!-- Eunoia version -->
     <Preference
-        android:key="lineage_version"
+        android:key="eunoia_version"
         android:title="@*lineageos.platform:string/lineage_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.EunoiaVersionDetailPreferenceController"/>
+        settings:controller="com.eunoiaos.settings.version.EunoiaVersionController"/>
 
     <!-- Security patch -->
     <Preference
