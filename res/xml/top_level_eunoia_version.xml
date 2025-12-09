@@ -35,7 +35,7 @@
         android:title="@*lineageos.platform:string/lineage_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:controller="com.eunoiaos.settings.version.EunoiaVersionController"/>
+        settings:controller="com.eunoiaos.settings.version.VersionDetailController"/>
 
     <!-- Maintainer -->
     <Preference
