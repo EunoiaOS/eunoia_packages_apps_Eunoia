@@ -43,6 +43,7 @@
         android:title="@string/maintainer_title"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
+        settings:searchable="false"
         settings:controller="com.eunoiaos.settings.version.EunoiaMaintainerController"/>
 
     <!-- Security patch -->
