@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,6 +33,8 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 
 import com.eunoiaos.settings.version.BuildNumberController;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 @SearchIndexable
 public class EunoiaVersionFragment extends DashboardFragment {
@@ -90,6 +93,11 @@ public class EunoiaVersionFragment extends DashboardFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        View appBarContainer = getActivity().findViewById(R.id.app_bar_container);
+        if (appBarContainer != null) {
+            appBarContainer.setVisibility(View.GONE);
+        }
 
         mContext = view.getContext();
         LayoutPreference headerPreference = findPreference(KEY_VERSION_HEADER);
