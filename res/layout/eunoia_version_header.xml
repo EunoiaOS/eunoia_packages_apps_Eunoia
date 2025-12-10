@@ -54,15 +54,17 @@
                 android:layout_marginTop="16dp"
                 android:textStyle="bold"
                 android:textSize="28sp"
-                android:textColor="?android:attr/colorPrimary" />
+                android:textColor="?android:attr/textColorPrimary" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/version_header_badge"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
+                android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/maintainer_badge"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

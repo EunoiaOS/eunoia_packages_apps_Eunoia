@@ -62,11 +62,6 @@ public class EunoiaVersionFragment extends DashboardFragment {
     }
 
     @Override
-    public int getTitle() {
-        return 0;
-    }
-
-    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (mBuildNumberController.onActivityResult(requestCode, resultCode, data)) {
             return;
@@ -79,6 +74,15 @@ public class EunoiaVersionFragment extends DashboardFragment {
         super.onAttach(context);
         mBuildNumberController = use(BuildNumberController.class);
         mBuildNumberController.setHost(this /* parent */);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        if (getActivity() != null) {
+            getActivity().setTitle(null);
+        }
     }
 
     @Override
@@ -102,7 +106,7 @@ public class EunoiaVersionFragment extends DashboardFragment {
                 mBadge.setVisibility(View.VISIBLE);
             } else {
                 mBadge.setVisibility(View.GONE);
-            }                
+            }
         }
     }
 
