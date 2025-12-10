@@ -19,8 +19,10 @@ package com.eunoiaos.settings;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -34,9 +36,15 @@ import com.eunoiaos.settings.version.BuildNumberController;
 @SearchIndexable
 public class EunoiaVersionFragment extends DashboardFragment {
     private static String KEY_VERSION_HEADER = "eunoia_version_info";
+    private static final String KEY_EUNOIA_DEVICE_PROP = "ro.eunoia.device";
+    private static final String KEY_EUNOIA_RELEASE_PROP = "ro.eunoia.releasetype";
 
+    private ImageView mBadge;
     private BuildNumberController mBuildNumberController;
+    private Context mContext;
+    private TextView mDevice;
     private ImageView mMaintainer;
+    private Boolean isOfficial;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -77,13 +85,33 @@ public class EunoiaVersionFragment extends DashboardFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        mContext = view.getContext();
         LayoutPreference headerPreference = findPreference(KEY_VERSION_HEADER);
         if (headerPreference != null) {
             mMaintainer = headerPreference.findViewById(R.id.version_header_icon);
             mMaintainer.setImageResource(R.drawable.maintainer_avatar);
+
+            String device = SystemProperties.get(KEY_EUNOIA_DEVICE_PROP, mContext.getString(R.string.unknown));
+            String release = SystemProperties.get(KEY_EUNOIA_RELEASE_PROP, mContext.getString(R.string.unknown));
+            mDevice = headerPreference.findViewById(R.id.version_header_title);
+            mDevice.setText("EunoiaOS | " + device + " | " + capitalize(release));
+
+            isOfficial = "VERIFIED".equals(release);
+            mBadge = headerPreference.findViewById(R.id.version_header_badge);
+            if (isOfficial) {
+                mBadge.setVisibility(View.VISIBLE);
+            } else {
+                mBadge.setVisibility(View.GONE);
+            }                
         }
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider(R.xml.top_level_eunoia_version);
+
+    private static String capitalize(String text) {
+        if (text == null || text.isEmpty()) return text;
+        return text.substring(0, 1).toUpperCase() +
+           text.substring(1).toLowerCase();
+    }
 }
