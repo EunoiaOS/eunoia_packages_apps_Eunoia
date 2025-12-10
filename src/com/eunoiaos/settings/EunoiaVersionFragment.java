@@ -18,18 +18,25 @@ package com.eunoiaos.settings;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.widget.LayoutPreference;
 
 import com.eunoiaos.settings.version.BuildNumberController;
 
 @SearchIndexable
 public class EunoiaVersionFragment extends DashboardFragment {
+    private static String KEY_VERSION_HEADER = "eunoia_version_info";
+
     private BuildNumberController mBuildNumberController;
+    private ImageView mMaintainer;
 
     @Override
     protected int getPreferenceScreenResId() {
@@ -59,6 +66,17 @@ public class EunoiaVersionFragment extends DashboardFragment {
             return;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        LayoutPreference headerPreference = findPreference(KEY_VERSION_HEADER);
+        if (headerPreference != null) {
+            mMaintainer = headerPreference.findViewById(R.id.version_header_icon);
+            mMaintainer.setImageResource(R.drawable.maintainer_avatar);
+        }
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =

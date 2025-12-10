@@ -20,6 +20,12 @@
     android:key="top_level_eunoia_version"
     android:title="@string/eunoia_title" >
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="eunoia_version_info"
+        android:order="-1"
+        android:layout="@layout/eunoia_version_header"
+        android:selectable="false"/>
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
