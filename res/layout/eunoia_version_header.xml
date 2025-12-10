@@ -17,6 +17,7 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/version_header"
     style="@style/VersionHeader"
     android:layout_width="match_parent"
@@ -33,11 +34,11 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/version_header_icon"
-            android:layout_width="88dp"
-            android:layout_height="88dp"
-            android:scaleType="fitCenter"
-            android:antialias="true" />
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImage" />
     </LinearLayout>
 </RelativeLayout>
