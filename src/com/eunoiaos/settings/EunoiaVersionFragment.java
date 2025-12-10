@@ -37,13 +37,15 @@ import com.eunoiaos.settings.version.BuildNumberController;
 public class EunoiaVersionFragment extends DashboardFragment {
     private static String KEY_VERSION_HEADER = "eunoia_version_info";
     private static final String KEY_EUNOIA_DEVICE_PROP = "ro.eunoia.device";
+    private static final String KEY_EUNOIA_MAINTAINER_PROP = "ro.eunoia.maintainer";
     private static final String KEY_EUNOIA_RELEASE_PROP = "ro.eunoia.releasetype";
 
+    private ImageView mAvatar;
     private ImageView mBadge;
     private BuildNumberController mBuildNumberController;
     private Context mContext;
     private TextView mDevice;
-    private ImageView mMaintainer;
+    private TextView mMaintainer;
     private Boolean isOfficial;
 
     @Override
@@ -92,13 +94,16 @@ public class EunoiaVersionFragment extends DashboardFragment {
         mContext = view.getContext();
         LayoutPreference headerPreference = findPreference(KEY_VERSION_HEADER);
         if (headerPreference != null) {
-            mMaintainer = headerPreference.findViewById(R.id.version_header_icon);
-            mMaintainer.setImageResource(R.drawable.maintainer_avatar);
+            mAvatar = headerPreference.findViewById(R.id.version_header_icon);
+            mAvatar.setImageResource(R.drawable.maintainer_avatar);
 
             String device = SystemProperties.get(KEY_EUNOIA_DEVICE_PROP, mContext.getString(R.string.unknown));
+            String maintainer = SystemProperties.get(KEY_EUNOIA_MAINTAINER_PROP, mContext.getString(R.string.unknown));
             String release = SystemProperties.get(KEY_EUNOIA_RELEASE_PROP, mContext.getString(R.string.unknown));
             mDevice = headerPreference.findViewById(R.id.version_header_title);
-            mDevice.setText("EunoiaOS | " + device + " | " + capitalize(release));
+            mDevice.setText("EunoiaOS | " + device);
+            mMaintainer = headerPreference.findViewById(R.id.version_header_summary);
+            mMaintainer.setText(maintainer);
 
             isOfficial = "VERIFIED".equals(release);
             mBadge = headerPreference.findViewById(R.id.version_header_badge);

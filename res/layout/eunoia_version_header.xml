@@ -41,6 +41,15 @@
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/CircleImage" />
 
+        <TextView
+            android:id="@+id/version_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="?android:attr/textColorPrimary" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,19 +57,19 @@
             android:gravity="center_vertical">
 
             <TextView
-                android:id="@+id/version_header_title"
+                android:id="@+id/version_header_summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textStyle="bold"
-                android:textSize="28sp"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
                 android:textColor="?android:attr/textColorPrimary" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/version_header_badge"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_marginTop="16dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="6dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/maintainer_badge"
                 android:visibility="gone"

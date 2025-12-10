@@ -40,16 +40,8 @@
         android:title="@*lineageos.platform:string/lineage_version"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
-        settings:controller="com.eunoiaos.settings.version.VersionDetailController"/>
-
-    <!-- Maintainer -->
-    <Preference
-        android:key="maintainer"
-        android:title="@string/maintainer_title"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
         settings:searchable="false"
-        settings:controller="com.eunoiaos.settings.version.EunoiaMaintainerController"/>
+        settings:controller="com.eunoiaos.settings.version.VersionDetailController"/>
 
     <!-- Security patch -->
     <Preference

@@ -32,10 +32,6 @@ public class VersionDetailController extends BasePreferenceController {
 
     private static final String KEY_EUNOIA_VERSION_PROP = "ro.eunoia.version";
     private static final String KEY_EUNOIA_CODENAME_PROP = "ro.eunoia.codename";
-    private static final String KEY_EUNOIA_DEVICE_PROP = "ro.eunoia.device";
-    private static final String KEY_EUNOIA_RELEASE_PROP = "ro.eunoia.releasetype";
-
-    private boolean showCodename = false;
 
     public VersionDetailController(Context context, String key) {
         super(context, key);
@@ -55,39 +51,9 @@ public class VersionDetailController extends BasePreferenceController {
     public CharSequence getSummary() {
         String version = SystemProperties.get(KEY_EUNOIA_VERSION_PROP,
                 mContext.getString(R.string.unknown));
-        String release = SystemProperties.get(KEY_EUNOIA_RELEASE_PROP,
-                mContext.getString(R.string.unknown));
-
-        return version + " | " + capitalize(release);
-    }
-
-    @Override
-    public boolean handlePreferenceTreeClick(Preference preference) {
-        if (!TextUtils.equals(preference.getKey(), KEY_EUNOIA_VERSION)) {
-            return false;
-        }
-        String version = SystemProperties.get(KEY_EUNOIA_VERSION_PROP,
-                mContext.getString(R.string.unknown));
         String codename = SystemProperties.get(KEY_EUNOIA_CODENAME_PROP,
                 mContext.getString(R.string.unknown));
-        String device = SystemProperties.get(KEY_EUNOIA_DEVICE_PROP,
-                mContext.getString(R.string.unknown));
-        String release = SystemProperties.get(KEY_EUNOIA_RELEASE_PROP,
-                mContext.getString(R.string.unknown));
 
-        if (showCodename) {
-            preference.setSummary(codename + " | " + device + " | " + capitalize(release));
-            showCodename = false;
-        } else {
-            preference.setSummary(version + " | " + capitalize(release));
-            showCodename = true;
-        }
-        return false;
-    }
-
-    private static String capitalize(String text) {
-        if (text == null || text.isEmpty()) return text;
-        return text.substring(0, 1).toUpperCase() +
-           text.substring(1).toLowerCase();
+        return version + " | " + codename;
     }
 }
