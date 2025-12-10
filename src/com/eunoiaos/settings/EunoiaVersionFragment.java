@@ -54,6 +54,11 @@ public class EunoiaVersionFragment extends DashboardFragment {
     }
 
     @Override
+    public int getTitle() {
+        return 0;
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (mBuildNumberController.onActivityResult(requestCode, resultCode, data)) {
             return;
