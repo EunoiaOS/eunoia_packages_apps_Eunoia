@@ -54,18 +54,18 @@ public class EunoiaVersionFragment extends DashboardFragment {
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mBuildNumberController = use(BuildNumberController.class);
-        mBuildNumberController.setHost(this /* parent */);
-    }
-
-    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (mBuildNumberController.onActivityResult(requestCode, resultCode, data)) {
             return;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mBuildNumberController = use(BuildNumberController.class);
+        mBuildNumberController.setHost(this /* parent */);
     }
 
     @Override
