@@ -4,6 +4,19 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Battery Bar -->
+    <string-array name="battery_bar_style_entries" translatable="false">
+        <item>@string/battery_bar_style_regular</item>
+        <item>@string/battery_bar_style_center_mirrored</item>
+        <item>@string/battery_bar_style_reversed</item>
+    </string-array>
+
+    <string-array name="battery_bar_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
     <!-- Hardware key rebinding -->
     <string-array name="hardware_keys_action_entries" translatable="false">
         <item>@string/hardware_keys_action_nothing</item>
