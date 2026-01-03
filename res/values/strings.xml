@@ -19,6 +19,10 @@
     <string name="eunoia_summary">EunoiaOS customization features</string>
     <string name="eunoia_title">Eunoia</string>
 
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
+
     <!-- Battery Bar -->
     <string name="battery_bar_color">Color</string>
     <string name="battery_bar_charging_color">Charging color</string>
