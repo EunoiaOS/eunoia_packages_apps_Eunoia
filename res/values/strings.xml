@@ -105,6 +105,9 @@
     <string name="power_menu_advanced_restart_summary">When unlocked, include options in the power menu for restarting into recovery or bootloader</string>
     <string name="power_menu_emergency_affordance_enabled">Emergency affordance is enabled</string>
 
+    <!-- Running services - Background processes tab -->
+    <string name="background_processes_settings_title">Background processes</string>
+
     <!-- Statusbar -->
     <string name="statusbar_settings_title">Statusbar</string>
     <string name="statusbar_settings_summary">Statusbar settings extra</string>
