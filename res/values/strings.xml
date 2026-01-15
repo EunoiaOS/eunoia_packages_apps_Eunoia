@@ -21,7 +21,7 @@
 
     <!-- Button -->
     <string name="button_settings_title">Button</string>
-    <string name="button_settings_summary">Button settings extra</string>
+    <string name="button_settings_summary">Customize button actions and behavior</string>
 
     <!-- Buttons - Enable navbar -->
     <string name="disable_navkeys_title">Enable on-screen nav bar</string>
@@ -110,7 +110,7 @@
 
     <!-- Statusbar -->
     <string name="statusbar_settings_title">Statusbar</string>
-    <string name="statusbar_settings_summary">Statusbar settings extra</string>
+    <string name="statusbar_settings_summary">Customize status bar appearance and behavior</string>
     <string name="status_bar_logo_title">Statusbar Logo</string>
     <string name="status_bar_logo_summary">Display a EunoiaOS logo on left of the status bar</string>
 
