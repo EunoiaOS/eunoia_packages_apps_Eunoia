@@ -28,6 +28,13 @@
         android:fragment="com.eunoiaos.settings.input.ButtonFragment" />
 
     <PreferenceScreen
+        android:key="gesturespref"
+        android:icon="@drawable/ic_settings_gestures"
+        android:title="@string/gestures_settings_title"
+        android:summary="@string/gestures_settings_summary"
+        android:fragment="com.eunoiaos.settings.gestures.GesturesFragment" />
+
+    <PreferenceScreen
         android:key="sbpref"
         android:icon="@drawable/ic_settings_statusbar"
         android:title="@string/statusbar_settings_title"

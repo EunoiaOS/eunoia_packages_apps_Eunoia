@@ -47,6 +47,10 @@
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
 
+    <!-- Gestures -->
+    <string name="gestures_settings_title">Gestures</string>
+    <string name="gestures_settings_summary">Configure system gestures and shortcuts</string>
+
     <!-- Hardware -->
     <string name="hardware_keys_power_key_title">Power button</string>
     <string name="hardware_keys_home_key_title">Home button</string>
