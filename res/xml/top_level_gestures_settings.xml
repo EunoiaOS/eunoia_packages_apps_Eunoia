@@ -19,4 +19,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <!-- Three-fingers-swipe to screenshot -->
+    <lineageos.preference.LineageSystemSettingSwitchPreference
+        android:icon="@drawable/ic_three_finger_gesture"
+        android:key="swipe_to_screenshot"
+        android:summary="@string/three_finger_gesture_summary"
+        android:title="@string/three_finger_gesture"
+        android:defaultValue="false" />
 </PreferenceScreen>
