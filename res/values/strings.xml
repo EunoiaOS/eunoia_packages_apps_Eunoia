@@ -143,6 +143,10 @@
     <string name="status_bar_logo_title">Statusbar Logo</string>
     <string name="status_bar_logo_summary">Display a EunoiaOS logo on left of the status bar</string>
 
+    <!-- Utilities -->
+    <string name="utilities_settings_title">Utilities</string>
+    <string name="utilities_settings_summary">Useful tools and helpers to enhance your experience</string>
+
     <!-- Units -->
     <string name="unit_seconds">seconds</string>
     <string name="unit_milliseconds">milliseconds</string>
