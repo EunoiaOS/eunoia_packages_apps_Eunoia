@@ -19,4 +19,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="game_settings"
+        android:title="@string/utilities_game_space_title"
+        android:summary="@string/utilities_game_space_summary"
+        settings:controller="com.eunoiaos.settings.utilities.GameSpaceController">
+    </Preference>
 </PreferenceScreen>

@@ -146,6 +146,8 @@
     <!-- Utilities -->
     <string name="utilities_settings_title">Utilities</string>
     <string name="utilities_settings_summary">Useful tools and helpers to enhance your experience</string>
+    <string name="utilities_game_space_title">Game space</string>
+    <string name="utilities_game_space_summary">Enhance your gaming experience</string>
 
     <!-- Units -->
     <string name="unit_seconds">seconds</string>
