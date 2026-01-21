@@ -41,11 +41,4 @@
         android:summary="@string/statusbar_settings_summary"
         android:fragment="com.eunoiaos.settings.statusbar.StatusbarFragment" />
 
-    <PreferenceScreen
-        android:key="utilspref"
-        android:icon="@drawable/ic_settings_utilities"
-        android:title="@string/utilities_settings_title"
-        android:summary="@string/utilities_settings_summary"
-        android:fragment="com.eunoiaos.settings.utilities.UtilitiesFragment" />
-
 </PreferenceScreen>
