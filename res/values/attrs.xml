@@ -34,4 +34,18 @@
     </declare-styleable>
 
     <attr name="secureValue" format="string" />
+
+    <declare-styleable name="DividerPreference">
+        <attr name="allowDividerAbove" format="boolean" />
+        <attr name="allowDividerBelow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="IntervalSeekBar">
+        <attr name="minValue" format="float" />
+        <attr name="maxValue" format="float" />
+        <attr name="defaultValue" />
+        <attr name="digits" format="integer" />
+    </declare-styleable>
+
+    <attr name="wifi_signal_color" format="reference" />
 </resources>
