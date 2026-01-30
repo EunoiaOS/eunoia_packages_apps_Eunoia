@@ -19,4 +19,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:icon="@drawable/ic_button_power_menu"
+        android:key="power_menu"
+        android:title="@string/power_menu_title"
+        android:fragment="com.eunoiaos.settings.input.PowerMenuActions" />
+
 </PreferenceScreen>
