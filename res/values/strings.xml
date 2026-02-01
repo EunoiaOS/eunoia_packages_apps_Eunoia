@@ -150,8 +150,7 @@
     <string name="status_bar_battery_title">Battery indicator</string>
     <string name="status_bar_battery_style_title">Battery status style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
-    <string name="status_bar_battery_style_circle">Circle</string>
-    <string name="status_bar_battery_style_eunoia">Eunoia</string>
+    <string name="status_bar_battery_style_eunoia_circle">Eunoia Circle</string>
     <string name="status_bar_battery_style_text">Text</string>
 
     <!-- Status bar - Battery percentage -->
