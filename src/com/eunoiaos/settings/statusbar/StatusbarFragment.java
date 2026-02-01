@@ -42,7 +42,7 @@ public class StatusbarFragment extends SettingsPreferenceFragment
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_QUICK_QS_PULLDOWN = "qs_quick_pulldown";
 
-    private static final int STATUS_BAR_BATTERY_STYLE_TEXT = 3;
+    private static final int STATUS_BAR_BATTERY_STYLE_POTRAIT = 1;
 
     private LineageSystemSettingListPreference mStatusBarBatteryShowPercent;
 
@@ -99,6 +99,6 @@ public class StatusbarFragment extends SettingsPreferenceFragment
     }
 
     private void enableStatusBarBatteryDependents(int batteryIconStyle) {
-        mStatusBarBatteryShowPercent.setEnabled(batteryIconStyle != STATUS_BAR_BATTERY_STYLE_TEXT);
+        mStatusBarBatteryShowPercent.setEnabled(batteryIconStyle == STATUS_BAR_BATTERY_STYLE_POTRAIT);
     }
 }
