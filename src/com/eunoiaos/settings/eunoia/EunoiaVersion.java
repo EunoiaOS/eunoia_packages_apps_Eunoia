@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.eunoiaos.settings;
+package com.eunoiaos.settings.eunoia;
 
 import android.content.Context;
 import android.content.Intent;
@@ -37,7 +37,7 @@ import com.eunoiaos.settings.version.BuildNumberController;
 import com.google.android.material.appbar.AppBarLayout;
 
 @SearchIndexable
-public class EunoiaVersionFragment extends DashboardFragment {
+public class EunoiaVersion extends DashboardFragment {
     private static String KEY_VERSION_HEADER = "eunoia_version_info";
     private static final String KEY_EUNOIA_DEVICE_PROP = "ro.eunoia.device";
     private static final String KEY_EUNOIA_MAINTAINER_PROP = "ro.eunoia.maintainer";

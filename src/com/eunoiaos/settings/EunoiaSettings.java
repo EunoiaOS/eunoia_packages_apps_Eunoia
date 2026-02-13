@@ -29,7 +29,7 @@ import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class EunoiaSettingsFragment extends SettingsPreferenceFragment {
+public class EunoiaSettings extends SettingsPreferenceFragment {
 
     @Override
     public void onCreate(Bundle icicle) {
