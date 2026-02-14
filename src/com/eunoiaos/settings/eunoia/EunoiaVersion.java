@@ -82,15 +82,6 @@ public class EunoiaVersion extends DashboardFragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
-        if (getActivity() != null) {
-            getActivity().setTitle(null);
-        }
-    }
-
-    @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 

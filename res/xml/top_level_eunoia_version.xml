@@ -17,7 +17,8 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:key="top_level_eunoia_version">
+    android:key="top_level_eunoia_version"
+    android:title="@string/eunoia_version_title">
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="eunoia_version_info"
