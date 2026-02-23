@@ -29,6 +29,7 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.LayoutPreference;
 
@@ -50,6 +51,11 @@ public class EunoiaVersion extends DashboardFragment {
     private TextView mDevice;
     private TextView mMaintainer;
     private Boolean isOfficial;
+
+    @Override
+    protected boolean displayTile(Tile tile) {
+        return false;
+    }
 
     @Override
     protected int getPreferenceScreenResId() {
