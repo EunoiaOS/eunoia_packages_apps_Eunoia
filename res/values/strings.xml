@@ -159,6 +159,10 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
+    <!-- Teams -->
+    <string name="eunoia_team_title">Eunoia Teams</string>
+    <string name="eunoia_title_summary">The team behind EunoiaOS, responsible for the website, system development, and device maintainers.</string>
+
     <!-- Units -->
     <string name="unit_seconds">seconds</string>
     <string name="unit_milliseconds">milliseconds</string>
