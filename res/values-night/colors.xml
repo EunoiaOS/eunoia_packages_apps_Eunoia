@@ -17,4 +17,17 @@
 <resources>
     <!-- User Card -->
     <color name="eunoia_innercard_bg">#fafffc</color>
+
+    <!-- Eunoia colors -->
+    <color name="eunoia_background">#121212</color>
+    <color name="eunoia_card">#1E1E1E</color>
+    <color name="eunoia_primary">#BB86FC</color>
+    <color name="eunoia_primary_variant">#3700B3</color>
+    <color name="eunoia_secondary">#03DAC5</color>
+    <color name="eunoia_text_primary">#FFFFFFFF</color>
+    <color name="eunoia_text_secondary">#B3FFFFFF</color>
+    <color name="eunoia_divider">#1FFFFFFF</color>
+    <color name="eunoia_ripple">#1FFFFFFF</color>
+    <color name="eunoia_status_bar">#000000</color>
+    <color name="eunoia_navigation_bar">#000000</color>
 </resources>

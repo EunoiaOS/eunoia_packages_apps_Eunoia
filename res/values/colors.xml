@@ -17,4 +17,17 @@
 <resources>
     <color name="homepage_eunoia_background">@android:color/system_accent1_300</color>
     <color name="eunoia_innercard_bg">#3d4441</color>
+
+    <!-- Eunoia colors -->
+    <color name="eunoia_background">#FFFFFF</color>
+    <color name="eunoia_card">@color/eunoia_background</color>
+    <color name="eunoia_primary">#6200EE</color>
+    <color name="eunoia_primary_variant">#3700B3</color>
+    <color name="eunoia_secondary">#03DAC5</color>
+    <color name="eunoia_text_primary">#DE000000</color>
+    <color name="eunoia_text_secondary">#99000000</color>
+    <color name="eunoia_divider">#1F000000</color>
+    <color name="eunoia_ripple">#1F000000</color>
+    <color name="eunoia_status_bar">#000000</color>
+    <color name="eunoia_navigation_bar">#FFFFFF</color>
 </resources>
