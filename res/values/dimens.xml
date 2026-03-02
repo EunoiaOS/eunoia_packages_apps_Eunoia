@@ -15,6 +15,19 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Eunoia -->
+    <dimen name="pref_min_height">56dp</dimen>
+    <dimen name="pref_horizontal_margin">16dp</dimen>
+    <dimen name="pref_vertical_margin">6dp</dimen>
+    <dimen name="pref_middle_margin">3dp</dimen>
+    <dimen name="pref_horizontal_padding">24dp</dimen>
+    <dimen name="pref_vertical_padding">14dp</dimen>
+    <dimen name="pref_radius_full">24dp</dimen>
+    <dimen name="pref_radius_middle">6dp</dimen>
+    <dimen name="pref_icon_size">20dp</dimen>
+    <dimen name="team_core_size">48dp</dimen>
+    <dimen name="team_button_size">24dp</dimen>
+
     <!-- User card -->
     <dimen name="eunoia_card_action">36dp</dimen>
     <dimen name="icon_verified_size">16dp</dimen>

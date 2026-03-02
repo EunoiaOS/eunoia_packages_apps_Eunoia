@@ -16,25 +16,31 @@
 
 package com.eunoiaos.settings.eunoia;
 
-import android.content.Context;
-import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.os.SystemProperties;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settingslib.drawer.Tile;
-import com.android.settingslib.search.SearchIndexable;
-import com.android.settingslib.widget.LayoutPreference;
 
 @SearchIndexable
 public class EunoiaTeam extends DashboardFragment {
+    protected final String TAG = "EunoiaTeamSettings";
+
+    public EunoiaTeam() {
+        // Required empty public constructor
+    }
+
     @Override
     protected boolean displayTile(Tile tile) {
         return false;
@@ -47,7 +53,7 @@ public class EunoiaTeam extends DashboardFragment {
 
     @Override
     protected String getLogTag() {
-        return "EunoiaTeamSettings";
+        return TAG;
     }
 
     @Override
@@ -55,6 +61,72 @@ public class EunoiaTeam extends DashboardFragment {
         return MetricsProto.MetricsEvent.EUNOIA_SETTINGS;
     }
 
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container, @NonNull Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.team_container, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @NonNull Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        addInformation(view);
+    }
+
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider(R.xml.top_level_eunoia_team);
+
+    private void addInformation(View parent) {
+        // Official Website
+        View mWebsite = parent.findViewById(R.id.eunoia_website);
+        setupInformation(mWebsite, R.drawable.ic_eunoia_website, R.string.eunoia_website_title, R.string.eunoia_website_url);
+        mWebsite.setBackground(createBackground(R.color.eunoia_card, R.color.eunoia_divider, 24f, 6f));
+        setMargin(mWebsite, 16, 6, 16, 0);
+    }
+
+    private GradientDrawable createBackground(int colorBg, int colorFg, float topRadius, float bottomRadius) {
+        GradientDrawable drawable = new GradientDrawable();
+        int color = getResources().getColor(colorBg, null);
+        int border = getResources().getColor(colorFg, null);
+
+        float scale = getResources().getDisplayMetrics().density;
+        float top = topRadius * scale;
+        float bottom = bottomRadius * scale;
+
+        int strokeWidth = (int) (1 * scale);
+        drawable.setColor(color);
+        drawable.setStroke(strokeWidth, border);
+        drawable.setCornerRadii(new float[] {
+                top, top,               // Top left
+                top, top,               // Top right
+                bottom, bottom,         // Bottom right
+                bottom, bottom          // Bottom left
+        });
+
+        return drawable;
+    }
+
+    private void setMargin(View parent, int leftMargin, int topMargin, int rightMargin, int bottomMargin) {
+        ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams)  parent.getLayoutParams();
+        float scale = getResources().getDisplayMetrics().density;
+
+        int left = (int) (leftMargin * scale);
+        int top = (int) (topMargin * scale);
+        int right = (int) (rightMargin * scale);
+        int bottom = (int) (bottomMargin * scale);
+
+        params.setMargins(left, top, right, bottom);
+        parent.setLayoutParams(params);
+    }
+
+    private void setupInformation(View information, int iconRes, int title, int summary) {
+        ImageView mIcon = information.findViewById(R.id.information_icon);
+        TextView mTitle = information.findViewById(R.id.information_title);
+        TextView mSummary = information.findViewById(R.id.information_summary);
+
+        mIcon.setImageResource(iconRes);
+        mTitle.setText(getString(title));
+        mSummary.setText(getString(summary));
+    }
 }

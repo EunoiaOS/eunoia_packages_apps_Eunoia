@@ -160,8 +160,23 @@
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
     <!-- Teams -->
-    <string name="eunoia_team_title">Eunoia Teams</string>
+    <string name="eunoia_team_title">EunoiaOS Teams</string>
     <string name="eunoia_title_summary">The team behind EunoiaOS, responsible for the website, system development, and device maintainers.</string>
+    <string name="eunoia_website_title">Official Website</string>
+    <string name="eunoia_website_url">eunoiaos.com</string>
+    <string name="eunoia_telegram_title">Telegram</string>
+    <string name="eunoia_telegram_url">t.me/EunoiaOS</string>
+    <string name="eunoia_support_title">Support</string>
+    <string name="eunoia_support_url">tako.id/EunoiaOS</string>
+
+    <!-- Teams - Core -->
+    <string name="eunoia_core_title">Core</string>
+    <string name="eunoia_core_founder_title">Founder</string>
+    <string name="eunoia_core_founder_person">Saiful Amri</string>
+    <string name="eunoia_core_designer_title">Lead Designer</string>
+    <string name="eunoia_core_designer_person">Bisma WY</string>
+    <string name="eunoia_core_development_title">Lead Development</string>
+    <string name="eunoia_core_development_person">Aditya Eka Pranata</string>
 
     <!-- Units -->
     <string name="unit_seconds">seconds</string>
