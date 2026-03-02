@@ -83,6 +83,18 @@ public class EunoiaTeam extends DashboardFragment {
         setupInformation(mWebsite, R.drawable.ic_eunoia_website, R.string.eunoia_website_title, R.string.eunoia_website_url);
         mWebsite.setBackground(createBackground(R.color.eunoia_card, R.color.eunoia_divider, 24f, 6f));
         setMargin(mWebsite, 16, 6, 16, 0);
+
+        // Telegram
+        View mTelegram = parent.findViewById(R.id.eunoia_telegram);
+        setupInformation(mTelegram, R.drawable.ic_eunoia_telegram, R.string.eunoia_telegram_title, R.string.eunoia_telegram_url);
+        mTelegram.setBackground(createBackground(R.color.eunoia_card, R.color.eunoia_divider, 6f, 6f));
+        setMargin(mTelegram, 16, 3, 16, 3);
+
+        // Support
+        View mSupport = parent.findViewById(R.id.eunoia_support);
+        setupInformation(mSupport, R.drawable.ic_eunoia_support, R.string.eunoia_support_title, R.string.eunoia_support_url);
+        mSupport.setBackground(createBackground(R.color.eunoia_card, R.color.eunoia_divider, 6f, 24f));
+        setMargin(mSupport, 16, 0, 16, 6);
     }
 
     private GradientDrawable createBackground(int colorBg, int colorFg, float topRadius, float bottomRadius) {

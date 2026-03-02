@@ -25,4 +25,14 @@
         android:id="@+id/eunoia_website"
         layout="@layout/eunoia_information" />
 
+    <!-- Telegram -->
+    <include
+        android:id="@+id/eunoia_telegram"
+        layout="@layout/eunoia_information" />
+
+    <!-- Support -->
+    <include
+        android:id="@+id/eunoia_support"
+        layout="@layout/eunoia_information" />
+
 </LinearLayout>
