@@ -30,4 +30,8 @@
     <color name="eunoia_ripple">#1F000000</color>
     <color name="eunoia_status_bar">#000000</color>
     <color name="eunoia_navigation_bar">#FFFFFF</color>
+
+    <!-- Fix missing colors -->
+    <color name="pref_inline_icon">#FFFFFF</color>
+    <color name="pref_eunoia_inline_icon">#FFFFFF</color>
 </resources>
