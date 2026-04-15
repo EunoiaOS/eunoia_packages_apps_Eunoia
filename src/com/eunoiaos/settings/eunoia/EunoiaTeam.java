@@ -63,8 +63,10 @@ public class EunoiaTeam extends DashboardFragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container, @NonNull Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.team_container, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+        @NonNull ViewGroup container,
+        @NonNull Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.eunoia_team_container, container, false);
     }
 
     @Override
